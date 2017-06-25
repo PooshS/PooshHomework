@@ -9,7 +9,7 @@ public class w1h4_2ad7_1 {
 
         System.out.println("Введите номер месяца (1 - 12): ");
         double m = sc.nextDouble();
-        System.out.println(m % 1);
+
         if(m >= 1 & m <= 12 & m % 1 == 0) {
             if (m == 1) System.out.println("Январь");
             if (m == 2) System.out.println("Февраль");
