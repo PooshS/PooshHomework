@@ -36,6 +36,17 @@ public class ArrayUtils {
         return arr;
     }
 
+    public static int[] generateArrWithRange(int size, int range) {
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            int el = (int)(Math.random() * range);
+            if(el >= 25) {
+                arr[i] = el;
+            } else arr[i] = el + 25;
+        }
+        return arr;
+    }
+
     public static void printArr(int[] arr){
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
