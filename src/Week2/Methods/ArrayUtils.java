@@ -7,10 +7,10 @@ import java.util.Scanner;
  */
 public class ArrayUtils {
 
-    public static int[] generateArr(){
-        Scanner sc = new Scanner(System.in);
+    public static int[] generateArr(int size){
+        /*Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size:");
-        int size = sc.nextInt();
+        int size = sc.nextInt();*/
 
         int[] arr = new int[size];
         for(int i = 0; i < arr.length; i++){
