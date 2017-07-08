@@ -19,6 +19,23 @@ public class ArrayUtils {
         return arr;
     }
 
+    public static int[] generateRegularArr(int size){
+        int[] arr = new int[size];
+        for(int i = 0; i < arr.length; i++){
+            int el = (int)(Math.random()*100);
+            if(i%2 == 0){
+                if(el % 2 == 0){
+                    arr[i] = el;
+                } else arr[i] = el + 1;
+            } else {
+                if(el % 2 != 0){
+                    arr[i] = el;
+                } else arr[i] = el + 1;
+            }
+        }
+        return arr;
+    }
+
     public static void printArr(int[] arr){
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
