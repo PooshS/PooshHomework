@@ -7,6 +7,8 @@ import java.util.Scanner;
  */
 public class ArrayUtils {
 
+
+    // method for array generate by random
     public static int[] generateArr(int size){
         /*Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size:");
@@ -19,6 +21,8 @@ public class ArrayUtils {
         return arr;
     }
 
+
+    // method for array generate by random. All elements a regular
     public static int[] generateRegularArr(int size){
         int[] arr = new int[size];
         for(int i = 0; i < arr.length; i++){
@@ -36,6 +40,8 @@ public class ArrayUtils {
         return arr;
     }
 
+
+    //method for array generate by random (with tange)
     public static int[] generateArrWithRange(int size, int range) {
         int[] arr = new int[size];
         for (int i = 0; i < arr.length; i++) {
@@ -47,6 +53,33 @@ public class ArrayUtils {
         return arr;
     }
 
+
+    // method of cutting array to given ranges
+    public static int[] splitArray(int[] arr, int start, int end){
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] >= start && arr[i] <= end) count++;
+        }
+
+        int [] arrNew = new int[count];
+        if(count ==0){
+            System.out.println("There are no values in the given range!");
+            return arrNew;
+        }
+        int j = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] >= start && arr[i] <= end){
+                arrNew[j] = arr[i];
+                j++;
+            }
+        }
+        System.out.println("The result of an array in a given range: ");
+        return arrNew;
+    }
+
+
+    //method of array printing
     public static void printArr(int[] arr){
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
