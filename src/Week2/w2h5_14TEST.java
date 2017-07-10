@@ -10,7 +10,6 @@ public class w2h5_14TEST {
         String str3 = "Hi"; String exp3 = "HiHiHi"; String res3 = w2h5_14.extraEnd(str3);
 
         String exp =   exp3;
-        String tag =   str3;
         String res =   res3;
 
         System.out.println("Expected: " + exp);
