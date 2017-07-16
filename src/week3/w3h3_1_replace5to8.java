@@ -2,8 +2,8 @@ package week3;
 
 import java.util.Scanner;
 
-/**
- * Created by Poosh on 16.07.2017.
+/*
+ 3.1. Заменить все числа, которые делятся на 5 без остачи в двухмерной матрице на 8
  */
 public class w3h3_1_replace5to8 {
     public static void main(String[] args) {
