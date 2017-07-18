@@ -24,6 +24,16 @@ public class w3_matrixUtils {
         return mat;
     }
 
+    public static int[][] matGenS1S2(int size1, int size2) {
+        int mat[][] = new int[size1][size2];
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                mat[i][j] = (int) (Math.random() * 100);
+            }
+        }
+        return mat;
+    }
+
     public static void matPrint(int mat [][]){
         for(int i = 0; i < mat.length; i++){
             for (int j = 0; j < mat[i].length; j++){
