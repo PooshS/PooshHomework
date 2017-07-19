@@ -10,9 +10,9 @@ public class w3h3_5_a_matChange {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter matrix size1:");
+        System.out.println("Enter number of rows:");
         int size1 = sc.nextInt();
-        System.out.println("Enter matrix size2:");
+        System.out.println("Enter number of columns:");
         int size2 = sc.nextInt();
 
         int[][] mat = w3_matrixUtils.matGenS1S2(size1, size2);
@@ -32,7 +32,6 @@ public class w3h3_5_a_matChange {
             for(int j = 0; j < mat[i].length; j++){
                 sum = sum + mat[i][j];
             }
-            System.out.println("sum of " + i + " column = " + sum);
             if(i == 0){
                 rowMax = sum;
                 rowMin = sum;
@@ -56,6 +55,7 @@ public class w3h3_5_a_matChange {
 
         System.out.println("Result:");
         w3_matrixUtils.matPrint(mat);
+        System.out.println();
         System.out.println("Max = " + rowMax + "; iMax = " + iMax);
         System.out.println("Min = " + rowMin + "; iMin = " + iMin);
     }
