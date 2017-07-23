@@ -6,7 +6,7 @@ package week3;
 
 import java.util.Scanner;
 
-public class w3h3_4matFromDiagonal {
+public class w3h3_4_matFromDiagonal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter matrix size:");

@@ -6,7 +6,7 @@ import java.util.Scanner;
  3.2. Создать логическую матрицу по следующим критериям, если і равно j, то элементом будет true.
  */
 
-public class w3h3_2logicMat {
+public class w3h3_2_logicMat {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter matrix size:");
