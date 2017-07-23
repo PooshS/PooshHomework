@@ -8,7 +8,10 @@ import java.util.Scanner;
 
 public class w3h3_7_longestWordInString {
     public static void main(String[] args) {
-        String str = new String("Enter string of some words");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter string of some words:");
+        String str = sc.nextLine();
+
         String[] string = str.split(" ");
         String longest = new String("");
 
