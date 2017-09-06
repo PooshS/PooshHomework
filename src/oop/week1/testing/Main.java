@@ -1,7 +1,7 @@
-package oop.week1.Testing;
+package oop.week1.testing;
 
-import oop.week1.Model.Group;
-import oop.week1.Model.Student;
+import oop.week1.model.Group;
+import oop.week1.model.Student;
 
 public class Main {
     public static void main(String[] args) {
