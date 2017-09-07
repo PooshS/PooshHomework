@@ -1,4 +1,7 @@
-package oop.week1.homework;
+package oop.week1.homework.testing;
+
+import oop.week1.homework.model.Student;
+import oop.week1.homework.model.Subject;
 
 /**
  * Created by Poosh on 06.09.2017.

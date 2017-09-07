@@ -1,4 +1,4 @@
-package oop.week1.model;
+package oop.week1.classwork;
 
 public class Student {
 

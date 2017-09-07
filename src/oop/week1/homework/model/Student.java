@@ -1,4 +1,4 @@
-package oop.week1.homework;
+package oop.week1.homework.model;
 
 /**
  * Created by Poosh on 06.09.2017.

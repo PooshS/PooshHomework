@@ -1,4 +1,6 @@
-package oop.week1.model;
+package oop.week1.classwork;
+
+import oop.week1.classwork.Student;
 
 public class Group {
 
@@ -15,11 +17,6 @@ public class Group {
             list[counter] = student;
             counter ++;
         }
-        /*for (int j = 0; j < list.length; j++){
-            if (list[j] == null) {
-                list[j] = student;
-            }
-        }*/
     }
 
     public Student getStudent(int arrIndex){
