@@ -38,7 +38,26 @@ public class Student {
         this.subjectList = subjects;
     }
 
+    private int cntWorkedHoursBeforeChange = 0;
+
+    public void study(Subject subject, int nmbrWorkedHours){
+        cntWorkedHoursBeforeChange = subject.getCntWorkedHours();
+        if(subject.getNmbrHours() - subject.getCntWorkedHours() == 0){
+            System.out.println("allocated time for the subject is over");
+        } else if(subject.getNmbrHours() - subject.getCntWorkedHours() < nmbrWorkedHours){
+            subject.setCntWorkedHours(subject.getNmbrHours());
+        } else subject.setCntWorkedHours(cntWorkedHoursBeforeChange + nmbrWorkedHours);
+    }
+
+    public int getCntWorkedHoursBeforeChange(){
+        return cntWorkedHoursBeforeChange;
+    }
+
     private int sbjctCounter = 0;
+
+    public int getSbjctCounter(){
+        return sbjctCounter;
+    }
 
     public void addSubject(Subject subject){
         if(subject == null){
@@ -50,5 +69,24 @@ public class Student {
             return;
         }
         subjectList[sbjctCounter++] = subject;
+    }
+
+    public void removeSubject(){
+        subjectList[--sbjctCounter] = null;
+    }
+
+    public void showAllInfoAboutSubjects(){
+        for (int i = 0; i < subjectList.length; i++) {
+            subjectList[i].showSubjectInfo();
+            System.out.println();
+        }
+    }
+
+    public double getAverageMark(){
+        int sum = 0;
+        for (int i = 0; i < subjectList.length; i++) {
+            sum += subjectList[i].getStdntMark();
+        }
+        return (double)sum/subjectList.length;
     }
 }
