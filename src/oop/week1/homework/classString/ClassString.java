@@ -1,4 +1,4 @@
-package oop.week1.homework.slassString;
+package oop.week1.homework.classString;
 
 /**
  * Created by Poosh on 07.09.2017.

@@ -1,6 +1,6 @@
 package oop.week1.homework.testing;
 
-import oop.week1.homework.slassString.ClassString;
+import oop.week1.homework.classString.ClassString;
 
 /**
  * Created by Poosh on 08.09.2017.

@@ -26,4 +26,13 @@ public class Coder extends Worker {
     public void code(){
         System.out.println("coder code()");
     }
+
+    @Override
+    public void work() {
+        System.out.println("Coder work");
+    }
+
+    public String toString(){
+        return String.format("id %d, name %s", getId(), getName());
+    }
 }
