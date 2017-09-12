@@ -2,28 +2,26 @@ package oop.week2.classwork.model;
 
 public class Card {
 
-    private int ID;
+    private int cardID;
     private String front;
     private String back;
 
 
     public Card() {
-
     }
 
-
-    public Card(int ID, String front, String back) {
-        this.ID = ID;
+    public Card(int cardID, String front, String back) {
+        this.cardID = cardID;
         this.front = front;
         this.back = back;
     }
 
-    public int getID() {
-        return ID;
+    public int getCardID() {
+        return cardID;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setCardID(int cardID) {
+        this.cardID = cardID;
     }
 
     public String getFront() {
@@ -44,10 +42,12 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
-                "ID=" + ID +
+        return "\tCard\n{" +
+                "cardID=" + cardID +
                 ", front='" + front + '\'' +
                 ", back='" + back + '\'' +
-                '}';
+                '}' + "\n";
     }
+
+
 }
