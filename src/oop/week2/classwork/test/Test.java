@@ -18,7 +18,7 @@ public class Test {
         System.out.println("--------------------------------------------------------");
         testAddCard(new Card(0, "dog", "kind of pet"), 1);
         System.out.println("--------------------------------------------------------");
-        removeCard(1,2);
+        removeCard(3,3);
         System.out.println("--------------------------------------------------------");
         testGetAllCardGroups();
         System.out.println("--------------------------------------------------------");
@@ -52,8 +52,10 @@ public class Test {
     public static void removeCard(int cardID){
         MainController mainController = new MainControllerImpl(new AppDB());
         mainController.createGroup(new CardGroup());
+        mainController.createGroup(new CardGroup());
         mainController.addCard(new Card(1, "dog", "kind of pet"), 2);
         mainController.addCard(new Card(2, "lion", "king of animal"), 2);
+        mainController.addCard(new Card(3, "sunday", "first day of the week"), 3);
 
         Card expected = mainController.searchCard(cardID);
         Card result = mainController.removeCard(cardID);
@@ -66,8 +68,10 @@ public class Test {
     public static void removeCard(int cardID, int groupID){
         MainController mainController = new MainControllerImpl(new AppDB());
         mainController.createGroup(new CardGroup());
+        mainController.createGroup(new CardGroup());
         mainController.addCard(new Card(1, "dog", "kind of pet"), 2);
         mainController.addCard(new Card(2, "lion", "king of animal"), 2);
+        mainController.addCard(new Card(3, "sunday", "first day of the week"), 3);
 
         Card expected = mainController.searchCard(cardID, groupID);
         Card result = mainController.removeCard(cardID, groupID);
@@ -91,10 +95,10 @@ public class Test {
     public static void testGetCards(){
         MainController mainController = new MainControllerImpl(new AppDB());
         mainController.createGroup(new CardGroup());
-        mainController.addCard(new Card(1, "car", "most popular machine"), 4);
+        mainController.addCard(new Card(1, "car", "most popular machine"), 5);
 
         boolean expected = true;
-        boolean result = (mainController.getCards(4) != null);
+        boolean result = (mainController.getCards(5) != null);
 
         System.out.println("test \"GetCards\" -> " + (result == expected) + ": expected " +
                 expected + ", result " + result);
