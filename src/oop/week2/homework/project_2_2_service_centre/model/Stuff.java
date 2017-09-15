@@ -1,0 +1,70 @@
+package oop.week2.homework.project_2_2_service_centre.model;
+
+
+import java.io.Serializable;
+
+public class Stuff  implements Serializable {
+    private String name;
+    private String surname;
+    private String post;
+    private double salary;
+
+
+    public Stuff() {
+    }
+
+    public Stuff(String name, String surname, String post, double salary) {
+        this.name = name;
+        this.surname = surname;
+        this.post = post;
+        this.salary = salary;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getPost() {
+        return post;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPost(String post) {
+        this.post = post;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    /*public String toString(){
+        //return String.format("name : %s, surname : %s, post : %�, salary: = %.3f\n", name, surname,post);
+        return String.format("name : %s, surname: %s, post : %s, salary: %.2f\n",name,surname,post,salary);
+    }*/
+
+    @Override
+    public String toString() {
+        return "Stuff{" +
+                "salary=" + salary +
+                ", post='" + post + '\'' +
+                ", surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
