@@ -13,11 +13,17 @@ public class Recurs {
         System.out.println(end);
 
         System.out.println(Test.rec("8388") ) ;
-        System.out.println("test \"factorial\" method -> " + codingBat_Recursion1.factorial(6));
-        System.out.println("test \"bunnyEars\" method -> " + codingBat_Recursion1.bunnyEars(6));
-        System.out.println("test \"fibonacci\" method -> " + codingBat_Recursion1.fibonacci(7));
-        System.out.println("test \"bunnyEars2\" method -> " + codingBat_Recursion1.bunnyEars2(5));
-        System.out.println("test \"triangle\" method -> " + codingBat_Recursion1.triangle(5));
+
+        System.out.println("1. test \"factorial\" method -> " + codingBat_Recursion1.factorial(6));
+        System.out.println("2. test \"bunnyEars\" method -> " + codingBat_Recursion1.bunnyEars(6));
+        System.out.println("3. test \"fibonacci\" method -> " + codingBat_Recursion1.fibonacci(7));
+        System.out.println("4. test \"bunnyEars2\" method -> " + codingBat_Recursion1.bunnyEars2(5));
+        System.out.println("5. test \"triangle\" method -> " + codingBat_Recursion1.triangle(5));
+        System.out.println("6. test \"sumDigits\" method -> " + codingBat_Recursion1.sumDigits(146));
+        System.out.println("7. test \"count7\" method -> " + codingBat_Recursion1.count7(717));
+        System.out.println("8. test \"count8\" method -> " + codingBat_Recursion1.count8(88788528));
+        System.out.println("9. test \"powerN\" method -> " + codingBat_Recursion1.powerN(5,8));
+        System.out.println("10. test \"countX\" method -> " + codingBat_Recursion1.countX("xxhixx"));
         }
 }
 
@@ -124,6 +130,113 @@ class codingBat_Recursion1 {
 
         return rows + triangle(--rows);
 
+    }
+
+
+    /*Given a non-negative int n, return the sum of its digits recursively (no loops).
+    Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6),
+    while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).*/
+
+    public static int sumDigits(int n) {
+        if(n / 10 == 0){
+            return n % 10;
+        }
+        return n % 10 + sumDigits(n/10);
+    }
+
+
+    /*Given a non-negative int n, return the count of the occurrences of 7 as a digit, so for example 717 yields 2.
+    (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6),
+    while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).*/
+
+    public static int count7(int n) {
+
+        int res;
+        if(n / 10 == 0){
+            if(n % 10 == 7){
+                return res = 1;
+            } else{
+                return res = 0;
+            }
+        }
+
+        if(n % 10 == 7){
+            res = 1;
+        } else{
+            res = 0;
+        }
+
+        return res = res + count7(n/10);
+
+    }
+
+
+    /*Given a non-negative int n, compute recursively (no loops) the count of the occurrences of 8 as a digit,
+    except that an 8 with another 8 immediately to its left counts double, so 8818 yields 4.
+    Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6),
+    while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).*/
+
+    public static int count8(int n) {
+        int res;
+        if(n / 10 == 0){
+            if(n % 10 == 8){
+                return res = 1;
+            } else{
+                return res = 0;
+            }
+        }
+
+        if(n % 10 == 8 && (n / 10) % 10 == 8){
+            res = 2;
+        } else if(n % 10 == 8 && (n / 10) % 10 != 8){
+            res = 1;
+        } else{
+            res = 0;
+        }
+
+        return res = res + count8(n/10);
+    }
+
+
+    /*Given base and n that are both 1 or more, compute recursively (no loops) the value of base to the n power,
+    so powerN(3, 2) is 9 (3 squared).*/
+
+    public static int powerN(int base, int n) {
+
+        if(base < 1 || n < 1){
+            return 0;
+        }
+
+        if(n == 1){
+            return base;
+        }
+
+        int res;
+
+        return res = base * powerN(base, --n);
+
+    }
+
+
+    /*Given a string, compute recursively (no loops) the number of lowercase 'x' chars in the string.*/
+
+    public static int countX(String str) {
+
+        if (str == null || str.isEmpty()){
+            return 0;
+        }
+
+        int counter = str.length();
+
+        int res;
+
+        if(str.codePointAt(--counter)== 120){
+            res = 1;
+        }else{
+            res = 0;
+        }
+
+        return res = res + countX(str.substring(0, counter));
     }
 }
 
